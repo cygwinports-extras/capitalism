@@ -1,0 +1,21 @@
+inherit qt4-qmake
+
+DESCRIPTION="Qt4 monopd client"
+HOMEPAGE="http://qt-apps.org/content/show.php/Capitalism?content=113173"
+#SRC_URI="http://qt-apps.org/CONTENT/content-files/113173-${P}.tbz"
+# .tbz is really a .tar.gz
+SRC_URI="113173-${P}.tar.gz"
+SRC_DIR="Capitalism-${PV}"
+
+src_install() {
+	cd ${B}
+	newbin Capitalism.exe capitalism.exe
+
+	for i in 16x16 22x22 24x24 32x32 48x48 64x64
+	do
+		insinto /usr/share/icons/hicolor/${i}/apps
+		newins icons/${i}.png capitalism.png
+	done
+
+	make_desktop_entry capitalism "Capitalism" capitalism "Game;BoardGame;Qt"
+}
