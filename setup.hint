@@ -1,5 +1,0 @@
-category: Games
-requires: libgcc1 libQtCore4 libQtGui4 libQtNetwork4 libQtXml4 libstdc++6
-sdesc: "Qt4 monopd client"
-ldesc: "Capitalism is a Qt4 client for the Monopd server. You can play 
-Monopoly like games with it."

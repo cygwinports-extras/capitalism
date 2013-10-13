@@ -1,11 +1,16 @@
 inherit qt4-qmake
 
-DESCRIPTION="Qt4 monopd client"
+NAME="capitalism"
+VERSION=0.5.1
+RELEASE=1
+CATEGORY="Games"
+SUMMARY="Qt4 monopd client"
+DESCRIPTION="Capitalism is a Qt4 client for the Monopd server. You can play
+Monopoly-like games with it."
+REQUIRES="monopd"
 HOMEPAGE="http://qt-apps.org/content/show.php/Capitalism?content=113173"
-#SRC_URI="http://qt-apps.org/CONTENT/content-files/113173-${P}.tbz"
-# .tbz is really a .tar.gz
-SRC_URI="113173-${P}.tar.gz"
-SRC_DIR="Capitalism-${PV}"
+SRC_URI="mirror://sourceforge/capitalism/${NAME}-${VERSION}.tbz"
+SRC_DIR="Capitalism-${VERSION}"
 
 src_install() {
 	cd ${B}
